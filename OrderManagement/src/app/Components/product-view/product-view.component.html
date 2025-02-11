@@ -1,1 +1,36 @@
-<p>product-view works!</p>
+<div class="outSet">
+    <table class="table table-hover table-bordered" style="width: 95%; margin-bottom: 20px;">
+        <thead>
+            <tr>
+    
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Pricee</th>
+                <th>Stock</th>
+                <th>Category</th>
+                <th>Created Date</th>
+                <th>Actions</th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.price | currency }}</td>
+                <td>{{ product.stock }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.createdAt | date:'short' }}</td>
+                <td>
+                    <button class="btn btn-accept btn-sm me-3"><i class="bi bi-trash3"></i>Delete</button>
+    
+                    <button class="btn btn-decline btn-sm"><i class="bi bi-pencil-square"></i>Edit</button>
+                </td>
+    
+    
+        </tbody>
+    </table>
+
+</div>
